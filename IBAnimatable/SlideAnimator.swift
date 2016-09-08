@@ -79,7 +79,7 @@ extension SlideAnimator: UIViewControllerAnimatedTransitioning {
 // MARK: - Animation
 
 private extension SlideAnimator {
-  func animateSlideTransition(toView: UIView, fromView: UIView, travel: CGAffineTransform, completion: AnimatableCompletion) {
+  func animateSlideTransition(toView: UIView, fromView: UIView, travel: CGAffineTransform, completion: @escaping AnimatableCompletion) {
     UIView.animate(withDuration: transitionDuration, animations: {
       fromView.transform = travel
       toView.transform = CGAffineTransform.identity
